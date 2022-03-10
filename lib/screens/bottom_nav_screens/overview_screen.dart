@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../widgets/course_lecture_tile.dart';
+import '../../widgets/gp_tile.dart';
 import '../../widgets/section_tile.dart';
-
 
 class OverviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.blue[900],
-      statusBarColor: Colors.blue,
-      // statusBarBrightness: Brightness.dark,
-    ));
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        systemNavigationBarColor: Colors.blue[900],
+        statusBarColor: Colors.blue,
+      ),
+    );
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.zero,
@@ -38,7 +39,6 @@ class OverviewScreen extends StatelessWidget {
                 clipper: WaveClipper(),
                 child: Container(
                   color: Colors.blue[500],
-
                 ),
               ),
             ),
@@ -187,50 +187,7 @@ class OverviewScreen extends StatelessWidget {
                       height: 10,
                     ),
                     Expanded(
-                      child: Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            RichText(
-                              text: TextSpan(
-                                children: [
-                                  WidgetSpan(
-                                      child: Icon(
-                                        Icons.gps_fixed_sharp,
-                                        color: Colors.green,
-                                      ),
-                                      alignment: PlaceholderAlignment.middle),
-                                  TextSpan(
-                                      text: ' CGPA',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                      ))
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            FittedBox(
-                              child: Text(
-                                '3.7',
-                                style: TextStyle(fontSize: 20),
-                              ),
-                            ),
-                            FittedBox(
-                              child: Text(
-                                'Up from the last semester',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      child: GPTile(),
                     ),
                   ],
                 ),

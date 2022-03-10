@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_grades_app/constants.dart';
 
+import './constants.dart';
 import './screens/authentication/sign_in.dart';
 import './screens/authentication/sign_up.dart';
-import 'screens/bottom_nav_screens/overview_screen.dart';
-import './screens/semester.dart';
-import './screens/year.dart';
+import './screens/great_point/great_point_overview_screen.dart';
+import './screens/great_point/semester.dart';
+import './screens/great_point/year.dart';
+import '../screens/bottom_nav_screens/overview_screen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         kOverviewScreenRoute: (context) => OverviewScreen(),
         kSemesterScreenRoute: (context) => SemesterScreen(),
         kYearScreenRoute: (context) => YearScreen(),
+        kGreatPointOverViewScreen: (context) => GreatPointOverViewScreen(),
       },
     );
   }

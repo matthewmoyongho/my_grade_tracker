@@ -13,7 +13,7 @@ class AuthForm extends StatefulWidget {
 class _AuthFormState extends State<AuthForm> {
   bool obscurePassword = true;
   String? _userName;
-  String? _usermail;
+  String? _userMail;
   String? _password;
   final _formKey = GlobalKey<FormState>();
   void submit() {
@@ -21,7 +21,7 @@ class _AuthFormState extends State<AuthForm> {
     // _formState.validate()
     _formState.save();
     widget.submit(
-        _userName!.trim(), _usermail!.trim(), _password!.trim(), context);
+        _userName!.trim(), _userMail!.trim(), _password!.trim(), context);
   }
 
   @override
@@ -62,7 +62,7 @@ class _AuthFormState extends State<AuthForm> {
                     ),
               SizedBox(height: 10),
               TextFormField(
-                onSaved: (val) => _usermail = val,
+                onSaved: (val) => _userMail = val,
                 validator: (value) => value!.isEmpty || !value.contains('@')
                     ? 'enter a valid email'
                     : null,
