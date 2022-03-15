@@ -10,7 +10,53 @@ class GreatPointOverViewScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('GP Overview'),
+        backgroundColor: Colors.blue[900],
         elevation: 0.0,
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.blue[900],
+        child: Column(
+          children: [
+            DrawerHeader(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: CircleAvatar(
+                      child: Text(
+                        'M',
+                        style: TextStyle(color: Colors.blueGrey, fontSize: 30),
+                      ),
+                      radius: 50,
+                    ),
+                  ),
+                  Text(
+                    'moyonghomatthew@gmail.com',
+                    style: TextStyle(fontSize: 16, color: Colors.white60),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              title: Text(
+                'Overview',
+                style: TextStyle(fontSize: 20, color: Colors.white60),
+              ),
+            ),
+            ListTile(
+              title: Text(
+                'Year',
+                style: TextStyle(fontSize: 20, color: Colors.white60),
+              ),
+            ),
+            ListTile(
+              title: Text(
+                'Semester',
+                style: TextStyle(fontSize: 20, color: Colors.white60),
+              ),
+            ),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -121,9 +167,34 @@ class GreatPointOverViewScreen extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
+              Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  // color: Colors.blue[900],
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(15),
+                    topLeft: Radius.circular(15),
+                  ),
+                ),
+                width: double.infinity,
+                //alignment: Alignment.center,
+                child: Text(
+                  'Years',
+                  style: TextStyle(color: Colors.blue[900], fontSize: 18),
+                ),
+              ),
               YearSummaryTile(fsgp: 5.0, ssgp: 2.5, year: 'First Year'),
+              SizedBox(
+                height: 20,
+              ),
               YearSummaryTile(fsgp: 1.24, ssgp: 4.0, year: 'Second Year'),
+              SizedBox(
+                height: 20,
+              ),
               YearSummaryTile(fsgp: 4.3, ssgp: 5.0, year: 'Third Year'),
+              SizedBox(
+                height: 20,
+              ),
               YearSummaryTile(fsgp: 4.1, ssgp: 4.5, year: 'Fourth Year'),
             ],
           ),

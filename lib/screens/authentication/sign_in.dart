@@ -33,7 +33,7 @@ class SignInScreen extends StatelessWidget {
                     left: 0,
                     height: MediaQuery.of(context).size.height * 0.5,
                     child: Container(
-                      color: Color(0xFF006BFF),
+                      color: Colors.blue[900],
                       width: double.infinity,
                     ),
                   ),

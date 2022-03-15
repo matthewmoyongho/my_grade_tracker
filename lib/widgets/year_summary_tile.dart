@@ -30,22 +30,6 @@ class _YearSummaryTileState extends State<YearSummaryTile> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            // color: Colors.blue[900],
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(15),
-              topLeft: Radius.circular(15),
-            ),
-          ),
-          width: double.infinity,
-          //alignment: Alignment.center,
-          child: Text(
-            'Years',
-            style: TextStyle(color: Colors.blue[900], fontSize: 18),
-          ),
-        ),
         Material(
           borderRadius: BorderRadius.circular(15),
           elevation: 5,

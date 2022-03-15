@@ -15,8 +15,8 @@ class CourseLectureTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 10),
-      width: MediaQuery.of(context).size.width * 0.6,
-      height: MediaQuery.of(context).size.height * 0.2,
+      width: MediaQuery.of(context).size.width * 0.5,
+      height: MediaQuery.of(context).size.height * 0.17,
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Colors.white,

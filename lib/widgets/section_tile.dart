@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class SectionTile extends StatelessWidget {
   String title;
   IconData icon;
-  Color color;
-  SectionTile(this.title, this.icon, this.color);
+
+  SectionTile(this.title, this.icon);
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +12,22 @@ class SectionTile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          height: 40,
-          width: 40,
+          // height: 40,
+          // width: 40,
           decoration: BoxDecoration(
-            color: color,
+            color: Colors.blue[900],
             borderRadius: BorderRadius.circular(10),
           ),
           child: Icon(
             icon,
-            size: 30,
+            size: 50,
+            color: Colors.blue,
           ),
         ),
-        Text(title)
+        Text(
+          title,
+          style: TextStyle(fontSize: 15, color: Colors.blueGrey),
+        )
       ],
     );
   }
